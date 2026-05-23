@@ -27,14 +27,8 @@
             {
                 "type": "text",
                 "field": "wizard_media_dir",
-                "label": "媒体库目录（电影/剧集）",
+                "label": "媒体目录（电影/剧集/下载）",
                 "placeholder": "/vol1/media"
-            },
-            {
-                "type": "text",
-                "field": "wizard_download_dir",
-                "label": "下载目录（与下载工具保持一致）",
-                "placeholder": "/vol1/downloads"
             },
             {
                 "type": "text",
