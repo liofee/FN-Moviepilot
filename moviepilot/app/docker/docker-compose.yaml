@@ -9,7 +9,6 @@ services:
       - ${TRIM_PKGETC:?}/config:/config
       - ${TRIM_APPDEST:?}/core:/moviepilot/.cloakbrowser
       - ${wizard_media_dir:?}:${wizard_media_dir:?}
-      - ${wizard_download_dir:?}:${wizard_download_dir:?}
       - ${wizard_torrent_dir:?}:/torrents
       - ${wizard_bt_backup_dir:?}:/BT_backup
       - /var/run/docker.sock:/var/run/docker.sock:ro
