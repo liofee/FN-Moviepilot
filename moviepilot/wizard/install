@@ -1,0 +1,53 @@
+[
+    {
+        "stepTitle": "目录设置",
+        "items": [
+            {
+                "type": "tips",
+                "helpText": "MoviePilot 是影视自动化管理工具，支持自动订阅、下载、整理和通知。<br>默认管理员用户名为 <b>admin</b>，<b>仅在首次安装 / 首次初始化时生效</b>。<br>如果你是重新安装但没有删除 Docker 数据卷，旧数据库会保留，密码不会重置；请在 MoviePilot 容器日志或设置中检查/修改管理员密码。"
+            },
+            {
+                "type": "tips",
+                "helpText": "<b>初始管理员账号：</b>下方留空则默认使用 <code>admin</code>,<b>初始密码：</b>下方留空则默认使用 <code>password</code>，建议在此处设置一个自定义初始密码（仅首次初始化时写入数据库）。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_superuser",
+                "label": "初始管理员账号（留空默认 admin，仅首次初始化生效）"
+            },
+            {
+                "type": "password",
+                "field": "wizard_password",
+                "label": "初始密码（留空默认 password，仅首次初始化生效）"
+            },
+            {
+                "type": "tips",
+                "helpText": "MoviePilot 需要访问下载工具（如 qBittorrent）的下载目录和媒体库目录，才能完成自动整理和刮削，挂载种子目录才能转种。<br><br><b>请确保填写的路径与下载工具实际使用的目录一致</b>，否则 MoviePilot 将无法找到已下载的文件。<br><br>路径填写 NAS 上的绝对路径，例如 <code>/vol1/downloads</code>、<code>/vol1/media</code>。<br>留空将使用应用私有数据目录（其他应用无法访问，不推荐）。"
+            },
+            {
+                "type": "text",
+                "field": "wizard_media_dir",
+                "label": "媒体库目录（电影/剧集）",
+                "placeholder": "/vol1/media"
+            },
+            {
+                "type": "text",
+                "field": "wizard_download_dir",
+                "label": "下载目录（与下载工具保持一致）",
+                "placeholder": "/vol1/downloads"
+            },
+            {
+                "type": "text",
+                "field": "wizard_torrent_dir",
+                "label": "Transmission种子目录（与下载工具保持一致）",
+                "placeholder": "/vol1/torrent"
+            },
+            {
+                "type": "text",
+                "field": "wizard_bt_backup_dir",
+                "label": "qBittorrent种子目录（与下载工具保持一致）",
+                "placeholder": "/vol1/BT_backup"
+            }
+        ]
+    }
+]

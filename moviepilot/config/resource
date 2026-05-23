@@ -1,0 +1,28 @@
+{
+    "docker-project":
+    {
+        "projects":
+        [
+            {
+                "name": "moviepilot",
+                "path": "docker"
+            }
+        ]
+    },
+    "data-share":
+    {
+        "shares":
+        [
+            {
+                "name": "moviepilot",
+                "permission":
+                {
+                    "rw":
+                    [
+                        "moviepilot"
+                    ]
+                }
+            }
+        ]
+    }
+}

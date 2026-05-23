@@ -1,0 +1,26 @@
+services:
+  moviepilot:
+    image: jxxghp/moviepilot-v2:latest 
+    container_name: moviepilot
+    hostname: moviepilot
+    ports:
+      - "${TRIM_SERVICE_PORT}:3000"
+    volumes:
+      - ${TRIM_PKGETC:?}/config:/config
+      - ${TRIM_APPDEST:?}/core:/moviepilot/.cloakbrowser
+      - ${wizard_media_dir:?}:${wizard_media_dir:?}
+      - ${wizard_download_dir:?}:${wizard_download_dir:?}
+      - ${wizard_torrent_dir:?}:/torrents
+      - ${wizard_bt_backup_dir:?}:/BT_backup
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=${TRIM_UID}
+      - PGID=${TRIM_GID}
+      - UMASK=022
+      - NGINX_PORT=3000
+      - PORT=3001
+      - GITHUB_PROXY=https://gh-proxy.com/
+      - SUPERUSER=${wizard_superuser:-admin}
+      - SUPERUSER_PASSWORD=${wizard_password:-password}
+    restart: always
